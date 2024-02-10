@@ -1,0 +1,35 @@
+
+// Função para resetar a animação da nuvem
+function resetAnimation() {
+    const cloud = document.querySelector('.cloud');
+    cloud.style.animation = 'none';                             // Reseta a animação para evitar problemas de reinício imediato
+    cloud.offsetHeight;                                         // Força uma reflow (rearranjo) para que a nova animação funcione corretamente
+    cloud.style.animation = 'rotationLeft 60s linear infinite'; // Reaplica a animação
+    console.log('A animação foi resetada!');                    // Mostra uma mensagem no console toda vez que a animação é reiniciada
+}
+
+// Chamar a função de reset uma vez ao carregar o DOM
+document.addEventListener('DOMContentLoaded', function () {
+    resetAnimation();
+
+    // Chamar a função de reset a cada 50 segundos
+    setInterval(resetAnimation, 30000);
+
+    
+
+    
+});
+
+
+let openButton = document.querySelector('.buttonNav');
+openButton.addEventListener("click", openMenu);
+
+function openMenu() {
+    let menuOpen = document.querySelector('.menuOpen');
+    if (menuOpen.style.width === "0px") {
+        menuOpen.style.width = "130px";
+    } else {
+        menuOpen.style.width = "0px";
+    }
+};
+

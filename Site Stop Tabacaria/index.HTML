@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="testecss.css" />
+  <div class="folha-cinza"></div>
+  
+  <style>
+    .highlight {
+  position: relative;
+  display: inline-block;
+  width: 300px; /* Largura desejada para os produtos em destaque */
+  height: 400px; /* Altura desejada para os produtos em destaque */
+}
+
+.highlight-description {
+  display: none;
+  position: absolute;
+  top: 80px; /* Posiciona a descrição no canto superior esquerdo */
+  left: 20px; /* Posiciona a descrição no canto superior esquerdo */
+  width: calc(100% - 40px); /* Ajusta a largura para 100% - 40px (20px de padding em cada lado) */
+  height: calc(30% - 120px); /* Ajusta a altura para 30% - 120px (100px para a imagem e 20px de padding superior) */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  box-sizing: border-box;
+  color: #fff; /* Define a cor do texto para branco */
+  overflow: auto; /* Adiciona uma barra de rolagem caso o conteúdo exceda o espaço disponível */
+}
+
+.highlight-image {
+  width: 100%; /* Ajusta a largura da imagem para ocupar todo o espaço disponível */
+  height: 70%; /* Ajusta a altura da imagem para ocupar 70% do espaço disponível */
+  object-fit: cover; /* Faz com que a imagem preencha todo o espaço sem distorção */
+}
+
+.highlight-price {
+  position: absolute;
+  bottom: 20px; /* Posiciona o preço no canto inferior esquerdo */
+  left: 20px; /* Posiciona o preço no canto inferior esquerdo */
+}
+
+.add-to-cart {
+  position: absolute;
+  bottom: 20px; /* Posiciona o botão no canto inferior direito */
+  right: 20px; /* Posiciona o botão no canto inferior direito */
+}
+
+.highlight:hover .highlight-description {
+  display: block;
+}
+.next-button {
+    width: 200px; /* Define o tamanho desejado para a imagem */
+    height: 200px;
+    margin-left: 70px; /* Define a margem desejada para separar a imagem das outras */
+    margin-top: -400px; /* Move a imagem um pouco para cima */
+    cursor: pointer;
+  }
+
+    #next-button {
+      float: right;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="folha-cinza"></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sobre.html">Sobre</a>
+    <div class="dropdown">
+      <a href="#" class="dropbtn">Produtos</a>
+      <div class="dropdown-content">
+        <a href="Essencias.html">Essencias</a>
+        <a href="Carvao.html">Carvão/Alumínio</a>
+        <a href="Acessorios.html">Acessórios</a>
+        <a href="Narguiles Prontos.html">Narguiles Prontos</a>
+      </div>
+    </div>
+    <a href="contato.html">Contato</a>
+    <div class="animation start-home"></div>
+  </nav>
+
+
+
+    <div class="buttons">
+      <a href="chat.png.crdownload" class="button">
+        <img src="chat.png" alt="Atendimento">
+      </a>
+      <a href="Carrinho.png.crdownload" class="button">
+        <img src="carrinho.png" alt="Carrinho">
+      </a>
+    </div>
+
+
+
+    <a href="contato.html"></a>
+    <div class="animation start-home"></div>
+  </nav>
+  
+  
+
+
+
+
+
+
+  <div id="image-container">
+    <img id="image" src="1.png" alt="Imagem 1">
+  </div>
+
+  <img id="next-button" class="next-button" src="cigarro.png" alt="Próxima imagem" onclick="changeImage()">
+
+
+
+
+
+  
+
+
+
+
+
+<footer class="rodape">
+  <div class="coluna">
+    <h3>Contato</h3>
+    <ul>
+      <li><strong>Número de telefone:</strong> (48) 99698-8239</li>
+    </ul>
+  </div>
+  <div class="coluna">
+    <h3>Redes sociais</h3>
+    <ul>
+      <li><strong>@stopnarguile</strong></li>
+      <li><strong>Facebook: Rafa Pacheco</strong></li>
+    </ul>
+  </div>
+  <div class="coluna">
+    <h3>Formas de pagamento</h3>
+    <div class="formas-pagamento">
+      <img src="pix.png" alt="Forma de pagamento 1">
+      <img src="cartao.png" alt="Forma de pagamento 2">
+      <img src="paypal.png" alt="Forma de pagamento 3">
+    </div>
+
+</footer>
+
+
+  <script>
+    const images = [
+      "1.png",
+      "2.png",
+      "6.png",
+      "4.png"
+    ];
+
+    let currentImageIndex = 0;
+    const imageElement = document.getElementById("image");
+    const nextButton = document.getElementById("next-button");
+
+    function changeImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      const newImageSource = images[currentImageIndex];
+      imageElement.src = newImageSource;
+    }
+
+    function autoChangeImage() {
+      changeImage();
+    }
+
+    setInterval(autoChangeImage, 3000);
+    document.addEventListener('DOMContentLoaded', function() {
+  var searchInput = document.getElementById('searchInput');
+  var searchButton = document.getElementById('searchButton');
+  
+  // Adiciona o evento de escuta para o pressionamento da tecla "Enter"
+  searchInput.addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      performSearch();
+    }
+  });
+  
+  // Adiciona o evento de escuta para o clique no botão de pesquisa
+  searchButton.addEventListener('click', function() {
+    performSearch();
+  });
+});
+
+function performSearch() {
+  var searchTerm = document.getElementById('searchInput').value;
+  
+  // Aqui você pode realizar a ação de pesquisa com base no searchTerm
+  // Por exemplo, você pode redirecionar para uma página de resultados de pesquisa
+  window.location.href = 'https://exemplo.com/pesquisa?term=' + encodeURIComponent(searchTerm);
+}
+
+
+  </script>
+</body>
+</html>

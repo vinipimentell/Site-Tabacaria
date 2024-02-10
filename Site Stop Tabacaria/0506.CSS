@@ -1,0 +1,91 @@
+/* testecss.css */
+
+/* Estilo para a imagem pequena */
+.small-image {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+/* Estilo para o menu de navegação */
+nav {
+  background-color: gray;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Estilo para a animação */
+.animation {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  margin-top: 10px;
+}
+
+.start-home {
+  animation: myAnimation 2s infinite;
+}
+
+@keyframes myAnimation {
+  0% { background-color: blue; }
+  50% { background-color: yellow; }
+  100% { background-color: blue; }
+}
+
+/* Estilo para a div folha-cinza */
+#folha-cinza {
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  margin-top: 10px;
+}
+
+/* Estilo para o link de email */
+a[title="Meu email"] {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  margin-top: 10px;
+}
+
+/* Estilo para o link do WhatsApp */
+a[title="Meu whatsapp"] {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  margin-top: 10px;
+}
+
+/* Estilo para a imagem do WhatsApp */
+img[alt="whatsapp"] {
+  margin-top: 10px;
+}
+
+/* Estilo para a mensagem de WhatsApp */
+a[href="https://wa.me/5548998535958"] {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Estilo para o link de chamada de áudio do WhatsApp */
+a[href="https://call.whatsapp.com/voice/aPBy4TKWwpfzzRlEZ2a0cT"] {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Estilo para o parágrafo */
+p {
+  margin-top: 10px;
+}
+
+/* Estilo para o iframe */
+iframe {
+  margin-top: 10px;
+}

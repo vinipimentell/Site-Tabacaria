@@ -1,0 +1,399 @@
+body {
+    background-color: white;
+  }
+  
+  .small-image {
+    background-image: url(stopnarguile1.jpg);
+    width: 170px;
+    height: 170px;
+    border-radius: 8px;
+    position: absolute;
+    left: 680px;
+    right: 250px;
+    top: 30px;
+    background-size: cover;
+
+  }
+
+  h1 {
+    color: rgb(240, 59, 59);
+    font-size: 60px; /* Ajuste o tamanho desejado em pixels */
+    text-align: center;
+    font-weight: bold;
+    direction: ltr;
+  }
+
+  h2 {
+    color: rgb(249, 241, 241);
+    font-size: 23px; /* Ajuste o tamanho desejado em pixels */
+    text-align: left;
+    font-weight: bold;
+    direction: ltr;
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+  p {
+    text-align: justify;
+    margin: 20px; /* Ajuste o valor conforme necessário */
+  }
+    .smallimage {
+        width: 900px; /* Largura desejada */
+        height: 550px; /* Altura desejada */
+        background-image: url(CONTACT.png); /* Substitua pelo caminho correto da sua imagem */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transform: rotateY(45deg); /* Ajuste o ângulo de rotação conforme necessário */
+        box-shadow: 0 0 10px rgb(253, 253, 253); /* Adicione uma sombra para dar uma aparência 3D */
+        margin-left: 300px; /* Ajuste o valor conforme necessário para mover a div para a direita */
+      }
+  
+
+      #image-container {
+        margin: 0 auto; /* Centraliza horizontalmente o menu de imagens */
+        display: flex;
+        align-items: right;
+        justify-content: flex-start; /* Alinha as imagens à esquerda da tela */
+        width:  30vw; /* Preenche toda a tela horizontalmente */
+        height: 100vh; /* Altura média de 30% da tela */
+        background-position: calc(100% - -150px) top;
+      }
+  #image {
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(1.5);
+    object-fit: contain;
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(13, 13, 13);
+    text-shadow: 2px 2px 4px #131212;
+    font-family: 'Helvetica', cursive;
+  }
+  
+  .imagem-container::-webkit-scrollbar {
+    display: none; /* Remover as barras de rolagem padrão do navegador */
+  }
+
+  .imagem {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 300px;
+    margin-right: 10px;
+    scroll-snap-align: center;
+  }
+
+  .imagem-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    align-items: center;
+    justify-content: flex-end;
+    width: 200px; /* Defina aqui o tamanho desejado */
+      height: 250px; /* Defina aqui o tamanho desejado */
+      background-position: calc(100% - -150px) top;
+  }
+  @keyframes slide-images {
+    0% {
+      transform: translateX(-100%);
+    }
+    20% {
+      transform: translateX(0%);
+    }
+    80% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .image-container div {
+    animation: slide-images 12s infinite;
+  }
+  
+  .image-container img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    clip-path: polygon(31% 0%, 69% 0%, 100% 31%, 100% 69%, 69% 100%, 31% 100%, 0% 69%, 0% 31%);
+    object-fit: cover;
+  }
+  
+  .image-container p {
+    text-align: center;
+  }
+  
+  .image-container a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  
+  .image-container a:hover {
+    text-decoration: underline;
+  }.image-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    white-space: nowrap; /* Evita quebra de linha */
+    width: 100%; /* Defina a largura desejada para o contêiner */
+  }
+  
+  .image-container div {
+    animation: slide-images 12s infinite;
+  }
+  
+  .image-container img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    clip-path: polygon(31% 0%, 69% 0%, 100% 31%, 100% 69%, 69% 100%, 31% 100%, 0% 69%, 0% 31%);
+    object-fit: cover;
+  }
+  
+  .image-container p {
+    text-align: center;
+  }
+  
+  .image-container a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  
+  .image-container a:hover {
+    text-decoration: underline;
+  }
+
+  
+  #btn-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-top: 80px;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+  }
+
+  #btn-next img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+  nav {
+    margin: 250px auto 0;
+    position: relative;
+    width: 470px;
+    height: 56px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+    font-size: 0;
+  }
+  
+  nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+  
+  nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+  }
+  
+  a:nth-child(1) {
+    width: 100px;
+  }
+  
+  a:nth-child(2) {
+    width: 110px;
+  }
+  
+  a:nth-child(3) {
+    width: 100px;
+  }
+  
+  a:nth-child(4) {
+    width: 160px;
+  }
+  
+  a:nth-child(5) {
+    width: 120px;
+  }
+  
+  
+  nav .start-home,
+  a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #e63535;
+  }
+  
+  nav .start-about,
+  a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+    background-color: #e63535;
+  }
+  
+  nav .start-portefolio,
+  a:nth-child(4):hover~.animation {
+    width: 160px;
+    left: 310px;
+    background-color: #e63535;
+  }
+  
+  nav .start-blog,
+  a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+    background-color: #e63535;
+  }
+  
+  
+  p {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Helvetica', cursive;
+    font-size: 16px;
+  }
+  
+  span {
+    color: #eaf1f0;
+  }
+  
+  .folha-cinza {
+    position: absolute;
+    top: 0;
+    left: 00px;
+    width: 100%;
+    height: calc(50% - 56px);
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+    background-image: url('Narguilefundo.jpg'),url('fumaçasemfundo.webp'), url('7.png');
+    background-position:right top, right top, left top;
+    background-repeat: no-repeat;
+    
+  }
+
+ 
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -500px;
+  }
+  
+  .button {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .button img {
+    width: 50px;
+    height: 50px;
+  }
+
+   /* Estilos para o submenu */
+   .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: #fefefe;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #e63535;
+  }
+
+  /* Estilos para o submenu quando o mouse está sobre ele */
+  .dropdown:hover .dropdown-content {
+    background-color:  rgb(0, 0, 0);
+  }
+  /* Estilo para o final do site */
+  .rodape {
+background-color: #181717; /* Substitua pelo código da cor do seu site */
+padding: 20px;
+color: #ffffff; /* Cor do texto no rodapé */
+  }
+ 
+  footer {
+margin: 20px 0;
+display: flex;
+}
+
+.coluna {
+margin-right: 300px;
+}
+
+h3 {
+font-weight: bold;
+font-family: 'Helvetica', cursive;
+}
+
+ul {
+margin: 5px 0;
+font-family: 'Helvetica', cursive;
+}
+
+li {
+margin: 5px 0;
+font-family: 'Helvetica', cursive;
+}
+
+
+.formas-pagamento img {
+width: 70px;
+margin-right: 50px;
+
+}
